@@ -40,6 +40,9 @@
 
     ];
 
+    $voto = $_GET['voto'];
+    $park = isset($_GET['parcheggio']) ? true : false;
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,6 +55,18 @@
 </head>
 <body>
     <div class="container">
+        <form action="" method="GET" class="d-flex justify-content-evenly align-items-center">
+            <select class="form-select w-25" multiple aria-label="multiple select example" name="voto">
+                <option selected>Seleziona voto</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3+</option>
+            </select>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" name="parcheggio">
+                <label class="form-check-label" for="exampleCheck1">Parcheggio</label>
+            </div>
+        </form>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -70,7 +85,7 @@
                         <tr>
                             <?php
                             foreach($hotel as $info){
-                                var_dump($info);
+                                //var_dump($info);
                                 ?>
                                     <td> <?php echo $info; ?> </td>
                                 <?php
