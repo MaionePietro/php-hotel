@@ -42,7 +42,7 @@
 
     $voto = $_GET['voto'];
     $park = isset($_GET['parcheggio']) ? true : false;
-    
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +53,7 @@
     <title>PHP Hotel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
-<body>
+<body class="">
     <div class="container">
         <form action="" method="GET" class="d-flex justify-content-evenly align-items-center">
             <select class="form-select w-25" multiple aria-label="multiple select example" name="voto">
@@ -66,6 +66,7 @@
                 <input type="checkbox" class="form-check-input" name="parcheggio">
                 <label class="form-check-label" for="exampleCheck1">Parcheggio</label>
             </div>
+            <button type="button" class="btn btn-primary">Cerca</button>
         </form>
         <table class="table table-striped">
             <thead>
